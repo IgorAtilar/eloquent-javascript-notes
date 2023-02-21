@@ -61,3 +61,51 @@ The simpliest kind of statement is an expression with a semicolon after it. This
 
 false;
 ```
+
+## Functions
+
+### Function Declaration
+
+When we define a function with the function keyword we have a function declaration
+
+```jsx
+function square(x) {
+  return x * x;
+}
+```
+
+> Function declarations are not part of the regular top-to-bottom flow of control. They are conceptually moved to the top of their scope and can be used by all the code in that scope.
+
+## Call Stack
+
+> The place where the computer stores this context is the _call
+> stack_. Every time a function is called, the current context is
+> stored on top of this stack. When a function returns, it removes the top
+> context from the stack and uses that context to continue execution.
+
+## **Closure**
+
+A function that references bindings from local scopes around it is called a closure.
+
+```jsx
+function wrapValue(n) {
+  let local = n;
+  // We create a functio who returns the wrapped n value
+  return () => local;
+}
+
+let wrap1 = wrapValue(1);
+let wrap2 = wrapValue(2);
+console.log(wrap1());
+// → 1
+console.log(wrap2());
+// → 2
+```
+
+## Recursion
+
+Recursion, in typical JavaScript implementations, it’s about three times slower than the looping version.
+
+## Pure function
+
+> A pure function has the pleasant property that, when called with the same arguments, it always produces the same value (and doesn’t do anything else)
