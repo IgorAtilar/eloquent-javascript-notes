@@ -109,3 +109,23 @@ Recursion, in typical JavaScript implementations, it’s about three times slowe
 ## Pure function
 
 > A pure function has the pleasant property that, when called with the same arguments, it always produces the same value (and doesn’t do anything else)
+
+## Properties
+
+> Almost all JavaScript values have properties. The exceptions are `null`
+> and `undefined`
+> . If you try to access a property on one of these nonvalues, you get an error.
+
+## Objects
+
+> Arrays, then, are just a kind of object specialized for storing sequences of things. If you evaluate `typeof []`
+> , it produces `"object"`
+> . You can see them as long, flat octopuses with all their tentacles in a neat row, labeled with numbers.
+
+We can’t compare the values inside of an object. We can just compare if they are appointing to the same memory position with `===`.
+
+## JSON
+
+We can serialize the javascript data with JSON to communicate on the Web.
+
+> JSON looks similar to JavaScript’s way of writing arrays and objects, with a few restrictions. All property names have to be surrounded by double quotes, and only simple data expressions are allowed—no function calls, bindings, or anything that involves actual computation. Comments are not allowed in JSON.
